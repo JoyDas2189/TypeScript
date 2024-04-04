@@ -9,9 +9,47 @@
 
 
 enum RequestType {
-    Getdata,
-    SaveData,
+    Getdata = 1,
+    SaveData = 4,
     DeleteData,
 }
 
 console.log(RequestType);
+
+
+//string enum..
+
+enum RequestType2 {
+    ReadData = "READ DATA",
+    DeleteData = "DELETE DATA",
+    SaveData = "SAVE DATA"
+}
+
+console.log(RequestType2);
+
+
+//heterogenous enum...
+
+enum RequestType3 {
+    ReadData = "READ DATA",
+    DeleteData = "DELETE DATA",
+    id = 101
+}
+console.log(RequestType3);
+console.log(RequestType3.id);
+
+
+//enum using function....
+
+
+enum Fruits {
+    Banana = "Kola",
+    Mango = "Aam",
+    Jackfruit = "Anarosh"
+}
+
+function checkFruit (fol:Fruits) {
+    console.log(fol);
+    
+}
+checkFruit(Fruits.Mango);
